@@ -22,6 +22,8 @@ import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.zxing.integration.android.IntentResult;
 
+import java.util.Date;
+
 public class Main2Activity extends AppCompatActivity {
 
     /**
@@ -81,6 +83,7 @@ public class Main2Activity extends AppCompatActivity {
                 incidencia.setUser("sandra proba");
                 incidencia.setIncidencia(missatgeIncidencia.getText().toString());
                 incidencia.setTipusIncidencia(tipusdeIncidencia.getText().toString());
+                incidencia.setData(extreureDataActual());
 
                 pujarIncidencia(incidencia);
                 missatgeIncidencia.setText("");
@@ -89,7 +92,11 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
     }
-
+    private String extreureDataActual(){
+        Date fecha = new Date();
+        System.out.println (fecha);
+        return fecha.toString();
+    }
     /**
      * Metode configuració botó Qr
      */

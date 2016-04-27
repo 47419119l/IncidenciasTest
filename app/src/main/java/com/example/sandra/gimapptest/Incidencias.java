@@ -10,9 +10,19 @@ public class Incidencias {
     private String incidencia;
     private String user;
     private boolean revisat;
+    private String data;
+
 
     Incidencias(){
 
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
     }
 
     public String getUser() {
